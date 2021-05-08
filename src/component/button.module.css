@@ -1,0 +1,39 @@
+.wrapper {
+  text-align: center;
+  transition: all 0.3s;
+}
+.title {
+  margin-bottom: 35px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 250px;
+  margin: 0 auto 50px;
+}
+
+.on {
+  width: 50px;
+  height: 35px;
+  border: 1px solid #000;
+  line-height: 36px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.off {
+  width: 50px;
+  height: 35px;
+  border: 1px solid #000;
+  line-height: 36px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.lamp {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  transition: all 0.3s;
+}
