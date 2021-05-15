@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BtnClick } from './component/Button'
+import { StarLink, UncontrolledAcordion } from './component/UncontrolledAcordion';
 
 
 
@@ -8,8 +9,11 @@ function App() {
   return (
     <div>
       <BtnClick />
-      <BtnClick />
-      <BtnClick />
+      <UncontrolledAcordion text='Accordion' />
+      <StarLink />
+    
+       
+       
     </div>
 
   )
