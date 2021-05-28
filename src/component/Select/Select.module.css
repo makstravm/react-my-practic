@@ -1,0 +1,42 @@
+.select {
+  background-color: #ececec;
+  padding: 0px 15px;
+  border: 1px solid #000;
+  position: relative;
+  display: inline-block;
+  line-height: 30px;
+  min-width: 100px;
+  box-sizing: border-box;
+  height: 30px;
+  cursor: pointer;
+}
+.select::after {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 12px;
+  border-top: 7px solid #000;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  transform: skew(1, -1);
+  transition: all 0.1s;
+}
+.select.active::after {
+  transform: scale(1, -1);
+}
+.items {
+  display: block;
+  border: 1px solid red;
+  left: 0;
+  right: 0;
+  top: 29px;
+  position: absolute;
+}
+.item {
+  transition: all 0.3s;
+  padding: 0 15px;
+}
+.item.active {
+  background-color: black;
+  color: #fff;
+}
