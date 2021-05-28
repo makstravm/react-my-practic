@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import style from '../button.module.css';
 
-type ToggleBtnPropsType = {
+export type ToggleBtnPropsType = {
   onLamp: boolean
   setOnLamp: (value: boolean) => void
 }
-type BtnPropsType = {
+export type BtnPropsType = {
   openToggle: boolean
   setOpenToggle: (value: boolean) => void
   onLamp: boolean
@@ -14,8 +14,6 @@ type BtnPropsType = {
 
 
 export function BtnClick(props: BtnPropsType) {
-
-
   const onClickOpen = () => props.openToggle === false ? props.setOpenToggle(true) : props.setOpenToggle(false)
   return (
     <div className="wrapper" >
@@ -29,7 +27,7 @@ export function BtnClick(props: BtnPropsType) {
   )
 }
 
-function ToggleBtn(props: ToggleBtnPropsType) {
+export function ToggleBtn(props: ToggleBtnPropsType) {
   const OnStyle = { background: props.onLamp ? 'green' : 'white' }
   const OffStyle = { background: props.onLamp ? 'white' : 'red' }
   const CircleStyle = { background: props.onLamp ? 'green' : 'red' }
