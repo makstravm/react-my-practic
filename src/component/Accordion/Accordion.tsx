@@ -1,4 +1,4 @@
-type ItemsType = {
+export type ItemsType = {
   title: string
   value: any
 }

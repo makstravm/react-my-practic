@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Accordion } from './component/Accordion/Accordion';
+import { Accordion, ItemsType } from './component/Accordion/Accordion';
 import { BtnClick } from './component/Button/Button';
 import { Rating, RatingValueType } from './component/Rating/Rating';
 import { UnconrolledReiting } from './component/UnconrolledReiting/UnconrolledReiting';
@@ -16,6 +16,8 @@ function App() {
   const [collapsed, setCollapsed] = useState<boolean>(false)
   const [on, setOn] = useState(false);
   const [open, setOpen] = useState(true);
+  const items: ItemsType[] = [{ title: 'aaaa', value: 1, }, { title: 'aaaa', value: 1, }]
+  function onCLick() { }
   return (
     <div>
       <BtnClick
@@ -34,7 +36,10 @@ function App() {
       <Accordion
         titleValue={'Menu'}
         collapsed={collapsed}
-        setCollapsed={setCollapsed} />
+        setCollapsed={setCollapsed}
+        items={items}
+        onClick={onCLick}
+      />
       <div><hr /></div>
       <div><hr /></div>
       <Rating
